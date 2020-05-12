@@ -44,7 +44,7 @@ new_vert_t,new_index_t,new_weight_t>
 			perror("posix_memalign");
 			for(new_index_t i=0;i<vert_count+1;++i)
 				beg_pos[i]=(new_index_t)tmp_beg_pos[i];
-			delete[] tmp_beg_pos;
+			//delete[] tmp_beg_pos;
 		}else{beg_pos=(new_index_t*)tmp_beg_pos;}
 	}else std::cout<<"beg file cannot open\n";
 
@@ -69,7 +69,7 @@ new_vert_t,new_index_t,new_weight_t>
 				perror("posix_memalign");
 			for(new_index_t i=0;i<edge_count;++i)
 				csr[i]=(new_vert_t)tmp_csr[i];
-			delete[] tmp_csr;
+			//delete[] tmp_csr;
 		}else csr=(new_vert_t*)tmp_csr;
 
 	}else std::cout<<"CSR file cannot open\n";
@@ -94,7 +94,7 @@ new_vert_t,new_index_t,new_weight_t>
 				perror("posix_memalign");
 			for(new_index_t i=0;i<edge_count;++i)
 				weight[i]=(new_weight_t)tmp_weight[i];
-			delete[] tmp_weight;
+			//delete[] tmp_weight;
 		}else weight=(new_weight_t*)tmp_weight;
 	}
 	else std::cout<<"Weight file cannot open\n";
